@@ -10,7 +10,7 @@ import Error from "./components/Error";
 function App() {
   const url = "http://localhost:5000/blogs";
   return (
-    <Router basename = "blogs">
+    <Router>
         <div className = "App">
           <div id = "main-content">
             <Header />

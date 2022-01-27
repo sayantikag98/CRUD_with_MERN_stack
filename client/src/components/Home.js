@@ -36,7 +36,8 @@ export default function Home({url}){
 
     const HandleOnSearchChange = (event) => {
         setSearch(event.target.value);
-        if(event.target.value.length > 0){
+        console.log(blogsCopy);
+        if(blogsCopy !== "No blog to display" && event.target.value.length > 0){
             const filteredBlogs = blogsCopy.filter(blog => blog.title.toLowerCase().startsWith(event.target.value.toLowerCase()));
             if(filteredBlogs.length === 0){
                 setBlogs("No such blog exists in the database");

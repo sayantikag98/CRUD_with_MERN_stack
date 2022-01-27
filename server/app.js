@@ -2,10 +2,11 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import route from "./routes/blogs.js";
+import { password } from "./login.js";
 
 const app = express();
-const PORT = 5000;
-const connectionString = `mongodb+srv://Sayantikag98:XXXXXXXXXXX@node-tutorial-yt.yawqt.mongodb.net/MERN-project-1?retryWrites=true&w=majority`;
+const PORT = 5000 || process.env.PORT;
+const connectionString = `mongodb+srv://Sayantikag98:${password}@node-tutorial-yt.yawqt.mongodb.net/test`;
 
 mongoose.connect(connectionString)
 .then(() => {
